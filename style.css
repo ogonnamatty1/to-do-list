@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, red, blue);
+    padding: 10px;
+}
+
+.todo-list {
+    /* display: flex; */
+    padding: 40px 30px 70px;
+    margin: 100px auto 20px;
+    /* height: auto; */
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.todo-list h2 {
+    display: flex;
+    color: blueviolet;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-list h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+
+}
+
+.input-box {
+    flex-grow: 2;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-box::placeholder {
+    color: blueviolet;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.alert {
+    color: red;
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+
+
+}
+
+.add {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    width: 30%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+.task-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8px 12px 50px;
+    user-select: one;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+}
+
+.task-list li:hover {
+    background-color: aliceblue;
+}
+
+.task-list li:hover button {
+    transform: scale(1);
+    transition: 0.4s ease-in-out;
+}
+
+.task-list li button {
+    width: 40px;
+    border: none;
+    outline: none;
+    transform: scale(0);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    
+}
+
+.task-list li button:hover {
+    
+    background-color: orangered;
+    color: white;
+}
+
+.task-list li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 25px;
+    left: 5%;
+    background-image: url(./icons/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.task-list .active {
+    text-decoration: line-through;
+
+}
+
+.task-list .active::before {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    height: 20px;
+    width: 25px;
+    left: 5%;
+    background-image: url(./icons/checked.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.delete-all{
+    visibility: hidden;
+    width: auto;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px;
+  margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+}
